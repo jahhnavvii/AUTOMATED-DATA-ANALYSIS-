@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg:         #0A0A0A;
+  --bg-card:    rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --text:       #FFFFFF;
+  --text-dim:   rgba(255, 255, 255, 0.5);
+  --text-muted: rgba(255, 255, 255, 0.3);
+  --border:     rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.22);
+  --accent-shadow: rgba(147, 104, 104, 0.25);
+  --accent-shadow-lg: rgba(147, 104, 104, 0.40);
+  --accent-glow: rgba(147, 104, 104, 0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes movingGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes breathingShadow {
+  0% { text-shadow: 0 0 20px rgba(147,104,104,0.1); }
+  50% { text-shadow: 0 0 40px rgba(147,104,104,0.6); }
+  100% { text-shadow: 0 0 20px rgba(147,104,104,0.1); }
+}
+
+.table-row-hover {
+  transition: background 0.2s ease;
+}
+.table-row-hover:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Fix native dropdown/select elements in dark theme */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px !important;
+  cursor: pointer;
+}
+
+select option {
+  background-color: #1a1a1a;
+  color: #FFFFFF;
+  padding: 8px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+}
+
+select option:hover,
+select option:checked {
+  background-color: #2a2a2a;
+  color: #FFFFFF;
+}
+
+select option:disabled {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+select:focus {
+  border-color: rgba(229, 201, 201, 0.4) !important;
+  box-shadow: 0 0 0 2px rgba(229, 201, 201, 0.1);
+}
+
+/* Fix input focus states */
+input:focus,
+input[type="number"]:focus,
+input[type="text"]:focus {
+  border-color: rgba(229, 201, 201, 0.4) !important;
+  box-shadow: 0 0 0 2px rgba(229, 201, 201, 0.1);
+}
+
+/* Remove number input spinners for cleaner look */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 1024px) {
+  .workspace-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
