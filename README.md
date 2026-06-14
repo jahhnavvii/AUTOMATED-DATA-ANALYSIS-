@@ -4,14 +4,8 @@ AutoDS is an automated machine learning (AutoML) and generative AI platform desi
 
 ---
 
-## 👥 Batch Details
-*   **D. Jahnavi** (24N31A6754)
-*   **B. Lokesh Raju** (24N31A6727)
-*   **D. Gurva Raj** (24N31A6753)
 
----
-
-## 🏗️ System Architecture & Engine Layout
+## System Architecture & Engine Layout
 
 AutoDS utilizes a robust multi-layered architecture to process data asynchronously and generate visual and textual reports:
 
@@ -68,7 +62,7 @@ graph TD
 
 ---
 
-## 🤖 How the AI in AutoDS Works
+##  How the AI in AutoDS Works
 
 AutoDS integrates Generative AI at critical stages of the pipeline to add descriptive narration and analytical intelligence:
 
@@ -78,7 +72,7 @@ AutoDS integrates Generative AI at critical stages of the pipeline to add descri
 
 ---
 
-## 📚 Foundational Research & Academic Support
+##  Foundational Research & Academic Support
 
 The design of the AutoDS automated pipeline is inspired by and built on core principles from established AutoML and agentic AI research:
 
